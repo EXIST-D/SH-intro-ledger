@@ -1,0 +1,252 @@
+[
+ {
+  "id": "2605.09746v2",
+  "year": "2026",
+  "title": "Sequential Feature Selection for Efficient Landslide Segmentation from Multi-Spectral Data",
+  "authors": [
+   "Arsalaan Ahmad",
+   "Oktay Karakus",
+   "Paul L. Rosin"
+  ],
+  "abstract": "Landslide detection from satellite imagery has advanced through deep learning, yet most models rely on large, highly correlated spectral-topographic inputs whose contributions remain poorly understood. The question of which channels are actually necessary has received surprisingly little attention. This matters: redundant or correlated inputs obscure physical interpretability, inflate computational overhead, and can actively degrade model performance through the Hughes Phenomenon. We present a systematic, explainable channel-selection framework for the Landslide4Sense benchmark, combining Sentinel-2 multispectral and ALOS PALSAR terrain data with 16 engineered spectral and structural indices. Rather than relying on conventional single-band drop tests, which evaluate channels in isolation and miss interaction effects, we apply Sequential Forward Floating Selection (SFFS) to iteratively build and prune a candidate feature pool using a lightweight U-Net++ proxy model. Beyond identifying a compact 8-channel subset that matches or exceeds the segmentation F1 of configurations using up to 30 channels, we use the selection process itself to interrogate which spectral and topographic features landslide models genuinely rely on, and what this reveals about the physical cues driving their predictions. We argue that SFFS represents a principled feature selection approach to input design in Earth observation, in contrast to the prevailing practice of appending every available band and hoping the model learns what to ignore."
+ },
+ {
+  "id": "2307.08951v1",
+  "year": "2023",
+  "title": "Knowledge-infused Deep Learning Enables Interpretable Landslide Forecasting",
+  "authors": [
+   "Zhengjing Ma",
+   "Gang Mei"
+  ],
+  "abstract": "Forecasting how landslides will evolve over time or whether they will fail is a challenging task due to a variety of factors, both internal and external. Despite their considerable potential to address these challenges, deep learning techniques lack interpretability, undermining the credibility of the forecasts they produce. The recent development of transformer-based deep learning offers untapped possibilities for forecasting landslides with unprecedented interpretability and nonlinear feature learning capabilities. Here, we present a deep learning pipeline that is capable of predicting landslide behavior holistically, which employs a transformer-based network called LFIT to learn complex nonlinear relationships from prior knowledge and multiple source data, identifying the most relevant variables, and demonstrating a comprehensive understanding of landslide evolution and temporal patterns. By integrating prior knowledge, we provide improvement in holistic landslide forecasting, enabling us to capture diverse responses to various influencing factors in different local landslide areas. Using deformation observations as proxies for measuring the kinetics of landslides, we validate our approach by training models to forecast reservoir landslides in the Three Gorges Reservoir and creeping landslides on the Tibetan Plateau. When prior knowledge is incorporated, we show that interpretable landslide forecasting effectively identifies influential factors across various landslides. It further elucidates how local areas respond to these factors, making landslide behavior and trends more interpretable and predictable. The findings from this study will contribute to understanding landslide behavior in a new way and make the proposed approach applicable to other complex disasters influenced by internal and external factors in the future."
+ },
+ {
+  "id": "2211.02869v1",
+  "year": "2022",
+  "title": "Deep Learning for Rapid Landslide Detection using Synthetic Aperture Radar (SAR) Datacubes",
+  "authors": [
+   "Vanessa Boehm",
+   "Wei Ji Leong",
+   "Ragini Bal Mahesh",
+   "Ioannis Prapas",
+   "Edoardo Nemni",
+   "Freddie Kalaitzis",
+   "Siddha Ganju",
+   "Raul Ramos-Pollan"
+  ],
+  "abstract": "With climate change predicted to increase the likelihood of landslide events, there is a growing need for rapid landslide detection technologies that help inform emergency responses. Synthetic Aperture Radar (SAR) is a remote sensing technique that can provide measurements of affected areas independent of weather or lighting conditions. Usage of SAR, however, is hindered by domain knowledge that is necessary for the pre-processing steps and its interpretation requires expert knowledge. We provide simplified, pre-processed, machine-learning ready SAR datacubes for four globally located landslide events obtained from several Sentinel-1 satellite passes before and after a landslide triggering event together with segmentation maps of the landslides. From this dataset, using the Hokkaido, Japan datacube, we study the feasibility of SAR-based landslide detection with supervised deep learning (DL). Our results demonstrate that DL models can be used to detect landslides from SAR data, achieving an Area under the Precision-Recall curve exceeding 0.7. We find that additional satellite visits enhance detection performance, but that early detection is possible when SAR data is combined with terrain information from a digital elevation model. This can be especially useful for time-critical emergency interventions. Code is made publicly available at https://github.com/iprapas/landslide-sar-unet."
+ },
+ {
+  "id": "2401.14210v1",
+  "year": "2024",
+  "title": "At the junction between deep learning and statistics of extremes: formalizing the landslide hazard definition",
+  "authors": [
+   "Ashok Dahal",
+   "Raphaël Huser",
+   "Luigi Lombardo"
+  ],
+  "abstract": "The most adopted definition of landslide hazard combines spatial information about landslide location (susceptibility), threat (intensity), and frequency (return period). Only the first two elements are usually considered and estimated when working over vast areas. Even then, separate models constitute the standard, with frequency being rarely investigated. Frequency and intensity are intertwined and depend on each other because larger events occur less frequently and vice versa. However, due to the lack of multi-temporal inventories and joint statistical models, modelling such properties via a unified hazard model has always been challenging and has yet to be attempted. Here, we develop a unified model to estimate landslide hazard at the slope unit level to address such gaps. We employed deep learning, combined with a model motivated by extreme-value theory to analyse an inventory of 30 years of observed rainfall-triggered landslides in Nepal and assess landslide hazard for multiple return periods. We also use our model to further explore landslide hazard for the same return periods under different climate change scenarios up to the end of the century. Our results show that the proposed model performs excellently and can be used to model landslide hazard in a unified manner. Geomorphologically, we find that under both climate change scenarios (SSP245 and SSP885), landslide hazard is likely to increase up to two times on average in the lower Himalayan regions while remaining the same in the middle Himalayan region whilst decreasing slightly in the upper Himalayan region areas."
+ },
+ {
+  "id": "2507.01123v2",
+  "year": "2025",
+  "title": "Landslide Detection and Mapping Using Deep Learning Across Multi-Source Satellite Data and Geographic Regions",
+  "authors": [
+   "Rahul A. Burange",
+   "Harsh K. Shinde",
+   "Omkar Mutyalwar"
+  ],
+  "abstract": "Landslides pose severe threats to infrastructure, economies, and human lives, necessitating accurate detection and predictive mapping across diverse geographic regions. With advancements in deep learning and remote sensing, automated landslide detection has become increasingly effective. This study presents a comprehensive approach integrating multi-source satellite imagery and deep learning models to enhance landslide identification and prediction. We leverage Sentinel-2 multispectral data and ALOS PALSAR-derived slope and Digital Elevation Model (DEM) layers to capture critical environmental features influencing landslide occurrences. Various geospatial analysis techniques are employed to assess the impact of terra in characteristics, vegetation cover, and rainfall on detection accuracy. Additionally, we evaluate the performance of multiple stateof-the-art deep learning segmentation models, including U-Net, DeepLabV3+, and Res-Net, to determine their effectiveness in landslide detection. The proposed framework contributes to the development of reliable early warning systems, improved disaster risk management, and sustainable land-use planning. Our findings provide valuable insights into the potential of deep learning and multi-source remote sensing in creating robust, scalable, and transferable landslide prediction models."
+ },
+ {
+  "id": "2309.06062v2",
+  "year": "2023",
+  "title": "Selection of contributing factors for predicting landslide susceptibility using machine learning and deep learning models",
+  "authors": [
+   "Cheng Chen",
+   "Lei Fan"
+  ],
+  "abstract": "Landslides are a common natural disaster that can cause casualties, property safety threats and economic losses. Therefore, it is important to understand or predict the probability of landslide occurrence at potentially risky sites. A commonly used means is to carry out a landslide susceptibility assessment based on a landslide inventory and a set of landslide contributing factors. This can be readily achieved using machine learning (ML) models such as logistic regression (LR), support vector machine (SVM), random forest (RF), extreme gradient boosting (Xgboost), or deep learning (DL) models such as convolutional neural network (CNN) and long short time memory (LSTM). As the input data for these models, landslide contributing factors have varying influences on landslide occurrence. Therefore, it is logically feasible to select more important contributing factors and eliminate less relevant ones, with the aim of increasing the prediction accuracy of these models. However, selecting more important factors is still a challenging task and there is no generally accepted method. Furthermore, the effects of factor selection using various methods on the prediction accuracy of ML and DL models are unclear. In this study, the impact of the selection of contributing factors on the accuracy of landslide susceptibility predictions using ML and DL models was investigated. Four methods for selecting contributing factors were considered for all the aforementioned ML and DL models, which included Information Gain Ratio (IGR), Recursive Feature Elimination (RFE), Particle Swarm Optimization (PSO), Least Absolute Shrinkage and Selection Operators (LASSO) and Harris Hawk Optimization (HHO). In addition, autoencoder-based factor selection methods for DL models were also investigated. To assess their performances, an exhaustive approach was adopted,..."
+ },
+ {
+  "id": "2502.19866v1",
+  "year": "2025",
+  "title": "LMHLD: A Large-scale Multi-source High-resolution Landslide Dataset for Landslide Detection based on Deep Learning",
+  "authors": [
+   "Guanting Liu",
+   "Yi Wang",
+   "Xi Chen",
+   "Baoyu Du",
+   "Penglei Li",
+   "Yuan Wu",
+   "Zhice Fang"
+  ],
+  "abstract": "Landslides are among the most common natural disasters globally, posing significant threats to human society. Deep learning (DL) has proven to be an effective method for rapidly generating landslide inventories in large-scale disaster areas. However, DL models rely heavily on high-quality labeled landslide data for strong feature extraction capabilities. And landslide detection using DL urgently needs a benchmark dataset to evaluate the generalization ability of the latest models. To solve the above problems, we construct a Large-scale Multi-source High-resolution Landslide Dataset (LMHLD) for Landslide Detection based on DL. LMHLD collects remote sensing images from five different satellite sensors across seven study areas worldwide: Wenchuan, China (2008); Rio de Janeiro, Brazil (2011); Gorkha, Nepal (2015); Jiuzhaigou, China (2015); Taiwan, China (2018); Hokkaido, Japan (2018); Emilia-Romagna, Italy (2023). The dataset includes a total of 25,365 patches, with different patch sizes to accommodate different landslide scales. Additionally, a training module, LMHLDpart, is designed to accommodate landslide detection tasks at varying scales and to alleviate the issue of catastrophic forgetting in multi-task learning. Furthermore, the models trained by LMHLD is applied in other datasets to highlight the robustness of LMHLD. Five dataset quality evaluation experiments designed by using seven DL models from the U-Net family demonstrate that LMHLD has the potential to become a benchmark dataset for landslide detection. LMHLD is open access and can be accessed through the link: https://doi.org/10.5281/zenodo.11424988. This dataset provides a strong foundation for DL models, accelerates the development of DL in landslide detection, and serves as a valuable resource for landslide prevention and mitigation efforts."
+ },
+ {
+  "id": "2105.00782v1",
+  "year": "2021",
+  "title": "Improving Landslide Detection on SAR Data through Deep Learning",
+  "authors": [
+   "Lorenzo Nava",
+   "Oriol Monserrat",
+   "Filippo Catani"
+  ],
+  "abstract": "In this letter, we use deep-learning convolution neural networks (CNNs) to assess the landslide mapping and classification performances on optical images (from Sentinel-2) and SAR images (from Sentinel-1). The training and test zones used to independently evaluate the performance of the CNNs on different datasets are located in the eastern Iburi subprefecture in Hokkaido, where, at 03.08 local time (JST) on September 6, 2018, an Mw 6.6 earthquake triggered about 8000 coseismic landslides. We analyzed the conditions before and after the earthquake exploiting multi-polarization SAR as well as optical data by means of a CNN implemented in TensorFlow that points out the locations where the Landslide class is predicted as more likely. As expected, the CNN run on optical images proved itself excellent for the landslide detection task, achieving an overall accuracy of 99.20% while CNNs based on the combination of ground range detected (GRD) SAR data reached overall accuracies beyond 94%. Our findings show that the integrated use of SAR data may also allow for rapid mapping even during storms and under dense cloud cover and seems to provide comparable accuracy to classical optical change detection in landslide recognition and mapping."
+ },
+ {
+  "id": "2206.00515v3",
+  "year": "2022",
+  "title": "Landslide4Sense: Reference Benchmark Data and Deep Learning Models for Landslide Detection",
+  "authors": [
+   "Omid Ghorbanzadeh",
+   "Yonghao Xu",
+   "Pedram Ghamisi",
+   "Michael Kopp",
+   "David Kreil"
+  ],
+  "abstract": "This study introduces \\textit{Landslide4Sense}, a reference benchmark for landslide detection from remote sensing. The repository features 3,799 image patches fusing optical layers from Sentinel-2 sensors with the digital elevation model and slope layer derived from ALOS PALSAR. The added topographical information facilitates the accurate detection of landslide borders, which recent researches have shown to be challenging using optical data alone. The extensive data set supports deep learning (DL) studies in landslide detection and the development and validation of methods for the systematic update of landslide inventories. The benchmark data set has been collected at four different times and geographical locations: Iburi (September 2018), Kodagu (August 2018), Gorkha (April 2015), and Taiwan (August 2009). Each image pixel is labelled as belonging to a landslide or not, incorporating various sources and thorough manual annotation. We then evaluate the landslide detection performance of 11 state-of-the-art DL segmentation models: U-Net, ResU-Net, PSPNet, ContextNet, DeepLab-v2, DeepLab-v3+, FCN-8s, LinkNet, FRRN-A, FRRN-B, and SQNet. All models were trained from scratch on patches from one quarter of each study area and tested on independent patches from the other three quarters. Our experiments demonstrate that ResU-Net outperformed the other models for the landslide detection task. We make the multi-source landslide benchmark data (Landslide4Sense) and the tested DL models publicly available at \\url{https://www.iarai.ac.at/landslide4sense}, establishing an important resource for remote sensing, computer vision, and machine learning communities in studies of image classification in general and applications to landslide detection in particular."
+ },
+ {
+  "id": "2405.11762v2",
+  "year": "2024",
+  "title": "Interpretability of Statistical, Machine Learning, and Deep Learning Models for Landslide Susceptibility Mapping in Three Gorges Reservoir Area",
+  "authors": [
+   "Cheng Chen",
+   "Lei Fan"
+  ],
+  "abstract": "Landslide susceptibility mapping (LSM) is crucial for identifying high-risk areas and informing prevention strategies. This study investigates the interpretability of statistical, machine learning (ML), and deep learning (DL) models in predicting landslide susceptibility. This is achieved by incorporating various relevant interpretation methods and two types of input factors: a comprehensive set of 19 contributing factors that are statistically relevant to landslides, as well as a dedicated set of 9 triggering factors directly associated with triggering landslides. Given that model performance is a crucial metric in LSM, our investigations into interpretability naturally involve assessing and comparing LSM accuracy across different models considered. In our investigation, the convolutional neural network model achieved the highest accuracy (0.8447 with 19 factors; 0.8048 with 9 factors), while Extreme Gradient Boosting and Support Vector Machine also demonstrated strong predictive capabilities, outperforming conventional statistical models. These findings indicate that DL and sophisticated ML algorithms can effectively capture the complex relationships between input factors and landslide occurrence. However, the interpretability of predictions varied among different models, particularly when using the broader set of 19 contributing factors. Explanation methods like SHAP, LIME, and DeepLIFT also led to variations in interpretation results. Using a comprehensive set of 19 contributing factors improved prediction accuracy but introduced complexities and inconsistency in model interpretations. Focusing on a dedicated set of 9 triggering factors sacrificed some predictive power but enhanced interpretability, as evidenced by more consistent key factors identified across various models and alignment with the findings of field investigation reports...."
+ },
+ {
+  "id": "2310.05959v1",
+  "year": "2023",
+  "title": "Automating global landslide detection with heterogeneous ensemble deep-learning classification",
+  "authors": [
+   "Alexandra Jarna Ganerød",
+   "Gabriele Franch",
+   "Erin Lindsay",
+   "Martina Calovi"
+  ],
+  "abstract": "With changing climatic conditions, we are already seeing an increase in extreme weather events and their secondary consequences, including landslides. Landslides threaten infrastructure, including roads, railways, buildings, and human life. Hazard-based spatial planning and early warning systems are cost-effective strategies to reduce the risk to society from landslides. However, these both rely on data from previous landslide events, which is often scarce. Many deep learning (DL) models have recently been applied for landside mapping using medium- to high-resolution satellite images as input. However, they often suffer from sensitivity problems, overfitting, and low mapping accuracy. This study addresses some of these limitations by using a diverse global landslide dataset, using different segmentation models, such as Unet, Linknet, PSP-Net, PAN, and DeepLab and based on their performances, building an ensemble model. The ensemble model achieved the highest F1-score (0.69) when combining both Sentinel-1 and Sentinel-2 bands, with the highest average improvement of 6.87 % when the ensemble size was 20. On the other hand, Sentinel-2 bands only performed very well, with an F1 score of 0.61 when the ensemble size is 20 with an improvement of 14.59 % when the ensemble size is 20. This result shows considerable potential in building a robust and reliable monitoring system based on changes in vegetation index dNDVI only."
+ },
+ {
+  "id": "2408.01692v1",
+  "year": "2024",
+  "title": "A Comparative Analysis of CNN-based Deep Learning Models for Landslide Detection",
+  "authors": [
+   "Omkar Oak",
+   "Rukmini Nazre",
+   "Soham Naigaonkar",
+   "Suraj Sawant",
+   "Himadri Vaidya"
+  ],
+  "abstract": "Landslides inflict substantial societal and economic damage, underscoring their global significance as recurrent and destructive natural disasters. Recent landslides in northern parts of India and Nepal have caused significant disruption, damaging infrastructure and posing threats to local communities. Convolutional Neural Networks (CNNs), a type of deep learning technique, have shown remarkable success in image processing. Because of their sophisticated architectures, advanced CNN-based models perform better in landslide detection than conventional algorithms. The purpose of this work is to investigate CNNs' potential in more detail, with an emphasis on comparison of CNN based models for better landslide detection. We compared four traditional semantic segmentation models (U-Net, LinkNet, PSPNet, and FPN) and utilized the ResNet50 backbone encoder to implement them. Moreover, we have experimented with the hyperparameters such as learning rates, batch sizes, and regularization techniques to fine-tune the models. We have computed the confusion matrix for each model and used performance metrics including precision, recall and f1-score to evaluate and compare the deep learning models. According to the experimental results, LinkNet gave the best results among the four models having an Accuracy of 97.49% and a F1-score of 85.7% (with 84.49% precision, 87.07% recall). We have also presented a comprehensive comparison of all pixel-wise confusion matrix results and the time taken to train each model."
+ },
+ {
+  "id": "2605.17419v1",
+  "year": "2026",
+  "title": "Learning Displacement-Robust Representations for Landslide Early Warning under Rainfall Forecast Uncertainty",
+  "authors": [
+   "Ren Ozeki",
+   "Hamada Rizk",
+   "Hirozumi Yamaguchi"
+  ],
+  "abstract": "Rainfall-induced landslides pose a growing risk worldwide as climate change intensifies extreme rainfall events. To provide sufficient evacuation time, landslide early warning systems (LEWS) for real-time disaster monitoring must estimate near-future landslide risk by integrating observed rainfall with short-term rainfall forecasts from spatio-temporal environmental data streams. Although recent landslide prediction methods have improved predictive performance using statistical and deep learning approaches, most assume accurate rainfall inputs. In operational settings, however, landslide prediction relies on rainfall forecasts, which often contain spatial displacement of rainfall fields due to forecasting uncertainties. Such displacement can alter local accumulated rainfall and degrade prediction accuracy. To address this challenge, we propose a novel LEWS robust to rainfall field displacement. The key idea is to learn latent representations from rainfall and terrain data that remain stable under displacement in rainfall field motion, enabling reliable geospatial data integration for landslide risk estimation. The landslide prediction model is trained using Rainfall-Motion-Aware Contrastive Learning (RMCL), which introduces temporally correlated rainfall field perturbations to emulate forecast-induced displacement in rainfall-driven spatio-temporal environmental data streams. Experiments were conducted using two years of rainfall and terrain data across Japan, covering 19 regions with landslide events. The proposed system achieved up to 37% higher precision than state-of-the-art baselines. These results demonstrate that modeling rainfall as a moving spatial field and addressing rainfall field displacement during learning significantly improve the reliability of short-term landslide prediction in operational early warning systems."
+ },
+ {
+  "id": "2304.06054v2",
+  "year": "2023",
+  "title": "Landslide Susceptibility Prediction Modeling Based on Self-Screening Deep Learning Model",
+  "authors": [
+   "Li Zhu",
+   "Lekai Liu",
+   "Changshi Yu"
+  ],
+  "abstract": "Landslide susceptibility prediction has always been an important and challenging content. However, there are some uncertain problems to be solved in susceptibility modeling, such as the error of landslide samples and the complex nonlinear relationship between environmental factors. A self-screening graph convolutional network and long short-term memory network (SGCN-LSTM) is proposed int this paper to overcome the above problems in landslide susceptibility prediction. The SGCN-LSTM model has the advantages of wide width and good learning ability. The landslide samples with large errors outside the set threshold interval are eliminated by self-screening network, and the nonlinear relationship between environmental factors can be extracted from both spatial nodes and time series, so as to better simulate the nonlinear relationship between environmental factors. The SGCN-LSTM model was applied to landslide susceptibility prediction in Anyuan County, Jiangxi Province, China, and compared with Cascade-parallel Long Short-Term Memory and Conditional Random Fields (CPLSTM-CRF), Random Forest (RF), Support Vector Machine (SVM), Stochastic Gradient Descent (SGD) and Logistic Regression (LR) models.The landslide prediction experiment in Anyuan County showed that the total accuracy and AUC of SGCN-LSTM model were the highest among the six models, and the total accuracy reached 92.38 %, which was 5.88%, 12.44%, 19.65%, 19.92% and 20.34% higher than those of CPLSTM-CRF, RF, SVM, SGD and LR models, respectively. The AUC value reached 0.9782, which was 0.0305,0.0532,0.1875,0.1909 and 0.1829 higher than the other five models, respectively. In conclusion, compared with some existing traditional machine learning, the SGCN-LSTM model proposed in this paper has higher landslide prediction accuracy and better robustness, and has a good application prospect in the LSP field."
+ },
+ {
+  "id": "2311.01564v2",
+  "year": "2023",
+  "title": "InSAR-Informed In-Situ Monitoring for Deep-Seated Landslides",
+  "authors": [
+   "Rachael Lau",
+   "Carolina Segui",
+   "Tyler Waterman",
+   "Nathaniel Chaney",
+   "Manolis Veveakis"
+  ],
+  "abstract": "This work focuses on assessing the fidelity of Interferometric Synthetic Aperture Radar (InSAR) as it relates to subsurface ground motion monitoring, as well as understanding uncertainty in modeling active landslide scarp displacement for the case study of the in situ monitored El Forn deep seated landslide in Canillo, Andorra. We used the available Sentinel 1 data on the Alaska Satellite Facility (ASF) Vertex platform to create deformation velocity maps and time series of the El Forn landslide scarp. We compared the performances of InSAR data from the recently launched European Ground Motion Service (EGMS) platform and the ASF Vertex Platform in a time series comparison of displacement in the direction of landslide motion with in situ borehole based measurements from 2019 to 2021, suggesting that ground motion detected through InSAR can be used in tandem with field monitoring to provide optimal information with minimum in situ deployment. While identification of active landslide scarps may be possible via the use of EGMS platform, the intents and purposes of this work are in assessment of InSAR as a monitoring tool. Based on that, geospatial interpolation with statistical analysis was conducted to better understand the necessary number of in situ observations needed to lower error on a remote sensing recreation of ground motion over the entirety of a landslide scarp, suggesting between 20 to 25 total observations provides the optimal normalized root mean squared error for an ordinarily kriged model of the El Forn landslide scarp."
+ },
+ {
+  "id": "2601.07268v2",
+  "year": "2026",
+  "title": "From Landslide Conditioning Factors to Satellite Embeddings: Evaluating the Utilisation of Google AlphaEarth for Landslide Susceptibility Mapping using Deep Learning",
+  "authors": [
+   "Yusen Cheng",
+   "Qinfeng Zhu",
+   "Lei Fan"
+  ],
+  "abstract": "Data-driven landslide susceptibility mapping (LSM) typically relies on landslide conditioning factors (LCFs), whose availability, heterogeneity, and preprocessing-related uncertainties can constrain mapping reliability. Recently, Google AlphaEarth (AE) embeddings, derived from multi-source geospatial observations, have emerged as a unified representation of Earth surface conditions. This study evaluated the potential of AE embeddings as alternative predictors for LSM. Two AE representations, including retained principal components and the full set of 64 embedding bands, were systematically compared with conventional LCFs across three study areas (Nantou County, Taiwan; Hong Kong; and part of Emilia-Romagna, Italy) using three deep learning models (CNN1D, CNN2D, and Vision Transformer). Performance was assessed using multiple evaluation metrics, ROC-AUC analysis, error statistics, and spatial pattern assessment. Results showed that AE-based models consistently outperformed LCFs across all regions and models, yielding higher F1-scores, AUC values, and more stable error distributions. Such improvement was most pronounced when using the full 64-band AE representation, with F1-score improvements of approximately 4% to 15% and AUC increased ranging from 0.04 to 0.11, depending on the study area and model. AE-based susceptibility maps also exhibited clearer spatial correspondence with observed landslide occurrences and enhanced sensitivity to localised landslide-prone conditions. Performance improvements were more evident in Nantou and Emilia than in Hong Kong. SHAP analysis further revealed regional variability in the contribution of individual AE bands, while several bands showed consistently high importance across all three study areas. These findings highlight the strong potential of AE embeddings as a standardised and information-rich alternative to conventional LCFs for LSM."
+ },
+ {
+  "id": "2403.10127v1",
+  "year": "2024",
+  "title": "TransLandSeg: A Transfer Learning Approach for Landslide Semantic Segmentation Based on Vision Foundation Model",
+  "authors": [
+   "Changhong Hou",
+   "Junchuan Yu",
+   "Daqing Ge",
+   "Liu Yang",
+   "Laidian Xi",
+   "Yunxuan Pang",
+   "Yi Wen"
+  ],
+  "abstract": "Landslides are one of the most destructive natural disasters in the world, posing a serious threat to human life and safety. The development of foundation models has provided a new research paradigm for large-scale landslide detection. The Segment Anything Model (SAM) has garnered widespread attention in the field of image segmentation. However, our experiment found that SAM performed poorly in the task of landslide segmentation. We propose TransLandSeg, which is a transfer learning approach for landslide semantic segmentation based on a vision foundation model (VFM). TransLandSeg outperforms traditional semantic segmentation models on both the Landslide4Sense dataset and the Bijie landslide dataset. Our proposed adaptive transfer learning (ATL) architecture enables the powerful segmentation capability of SAM to be transferred to landslide detection by training only 1.3% of the number of the parameters of SAM, which greatly improves the training efficiency of the model. Finally we also conducted ablation experiments on models with different ATL structures, concluded that the deployment location and residual connection of ATL play an important role in TransLandSeg accuracy improvement."
+ },
+ {
+  "id": "2211.10338v1",
+  "year": "2022",
+  "title": "Deep learning based landslide density estimation on SAR data for rapid response",
+  "authors": [
+   "Vanessa Boehm",
+   "Wei Ji Leong",
+   "Ragini Bal Mahesh",
+   "Ioannis Prapas",
+   "Edoardo Nemni",
+   "Freddie Kalaitzis",
+   "Siddha Ganju",
+   "Raul Ramos-Pollán"
+  ],
+  "abstract": "This work aims to produce landslide density estimates using Synthetic Aperture Radar (SAR) satellite imageries to prioritise emergency resources for rapid response. We use the United States Geological Survey (USGS) Landslide Inventory data annotated by experts after Hurricane María in Puerto Rico on Sept 20, 2017, and their subsequent susceptibility study which uses extensive additional information such as precipitation, soil moisture, geological terrain features, closeness to waterways and roads, etc. Since such data might not be available during other events or regions, we aimed to produce a landslide density map using only elevation and SAR data to be useful to decision-makers in rapid response scenarios. The USGS Landslide Inventory contains the coordinates of 71,431 landslide heads (not their full extent) and was obtained by manual inspection of aerial and satellite imagery. It is estimated that around 45\\% of the landslides are smaller than a Sentinel-1 typical pixel which is 10m $\\times$ 10m, although many are long and thin, probably leaving traces across several pixels. Our method obtains 0.814 AUC in predicting the correct density estimation class at the chip level (128$\\times$128 pixels, at Sentinel-1 resolution) using only elevation data and up to three SAR acquisitions pre- and post-hurricane, thus enabling rapid assessment after a disaster. The USGS Susceptibility Study reports a 0.87 AUC, but it is measured at the landslide level and uses additional information sources (such as proximity to fluvial channels, roads, precipitation, etc.) which might not regularly be available in an rapid response emergency scenario."
+ },
+ {
+  "id": "2110.04922v2",
+  "year": "2021",
+  "title": "Meta-learning an Intermediate Representation for Few-shot Block-wise Prediction of Landslide Susceptibility",
+  "authors": [
+   "Li Chen",
+   "Yulin Ding",
+   "Saeid Pirasteh",
+   "Han Hu",
+   "Qing Zhu",
+   "Haowei Zeng",
+   "Haojia Yu",
+   "Qisen Shang",
+   "Yongfei Song"
+  ],
+  "abstract": "Predicting a landslide susceptibility map (LSM) is essential for risk recognition and disaster prevention. Despite the successful application of data-driven approaches for LSM prediction, most methods generally apply a single global model to predict the LSM for an entire target region. However, in large-scale areas with significant environmental change, various parts of the region hold different landslide-inducing environments, and therefore, should be predicted with respective models. This study first segmented target scenarios into blocks for individual analysis. Then, the critical problem is that in each block with limited samples, conducting training and testing a model is impossible for a satisfactory LSM prediction, especially in dangerous mountainous areas where landslide surveying is expensive. To solve the problem, we trained an intermediate representation by the meta-learning paradigm, which is superior for capturing information valuable for few-shot adaption from LSM tasks. We hypothesized that there are more general and vital concepts concerning landslide causes and are sensitive to variations in input features. Thus, we can quickly few-shot adapt the models from the intermediate representation for different blocks or even unseen tasks using very few exemplar samples. Experimental results on the two study areas demonstrated the validity of our block-wise analysis in large scenarios and revealed the top few-shot adaption performances of the proposed methods."
+ },
+ {
+  "id": "2308.11929v1",
+  "year": "2023",
+  "title": "Dynamic landslide susceptibility mapping over recent three decades to uncover variations in landslide causes in subtropical urban mountainous areas",
+  "authors": [
+   "Peifeng Ma",
+   "Li Chen",
+   "Chang Yu",
+   "Qing Zhu",
+   "Yulin Ding"
+  ],
+  "abstract": "Landslide susceptibility assessment (LSA) is of paramount importance in mitigating landslide risks. Recently, there has been a surge in the utilization of data-driven methods for predicting landslide susceptibility due to the growing availability of aerial and satellite data. Nonetheless, the rapid oscillations within the landslide-inducing environment (LIE), primarily due to significant changes in external triggers such as rainfall, pose difficulties for contemporary data-driven LSA methodologies to accommodate LIEs over diverse timespans. This study presents dynamic landslide susceptibility mapping that simply employs multiple predictive models for annual LSA. In practice, this will inevitably encounter small sample problems due to the limited number of landslide samples in certain years. Another concern arises owing to the majority of the existing LSA approaches train black-box models to fit distinct datasets, yet often failing in generalization and providing comprehensive explanations concerning the interactions between input features and predictions. Accordingly, we proposed to meta-learn representations with fast adaptation ability using a few samples and gradient updates; and apply SHAP for each model interpretation and landslide feature permutation. Additionally, we applied MT-InSAR for LSA result enhancement and validation. The chosen study area is Lantau Island, Hong Kong, where we conducted a comprehensive dynamic LSA spanning from 1992 to 2019. The model interpretation results demonstrate that the primary factors responsible for triggering landslides in Lantau Island are terrain slope and extreme rainfall. The results also indicate that the variation in landslide causes can be primarily attributed to extreme rainfall events, which result from global climate change, and the implementation of the Landslip Prevention and Mitigation Programme (LPMitP) by the Hong Kong government."
+ }
+]

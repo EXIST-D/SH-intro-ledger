@@ -1,0 +1,701 @@
+{
+ "case_id": null,
+ "status": "success",
+ "manuscript": {
+  "files": [
+   "intro.md",
+   "intro.docx",
+   "intro.tex"
+  ],
+  "text": "## 1 Introduction\n\nRapid landslide mapping after a triggering event informs emergency response, and two kinds of imagery compete for the job. Synthetic Aperture Radar (SAR) can provide measurements of affected areas independent of weather or lighting conditions [1], yet optical images gave an overall accuracy of 99.20% in a Hokkaido earthquake case where SAR-based CNNs reached overall accuracies beyond 94% [2]. Choosing a sensor therefore trades accuracy against availability, and a model that serves both would shorten the time to a usable inventory.\n\n## 2 Related Work\n\n**Input modality.** Optical and SAR inputs have been compared directly: optical CNNs were more accurate, whereas SAR still allowed rapid mapping during storms and under dense cloud cover [2]. Boehm et al. show that deep learning models can detect landslides from SAR data, with an area under the precision-recall curve above 0.7, and that early detection is possible when SAR is combined with terrain information [1]. Combining Sentinel-1 and Sentinel-2 bands gave the highest F1-score (0.69) in a heterogeneous ensemble, compared with 0.61 for Sentinel-2 bands only [3].\n\n**Benchmarks and architecture comparisons.** Landslide4Sense provides 3,799 image patches that fuse Sentinel-2 layers with elevation and slope layers, and the authors found that ResU-Net outperformed ten other segmentation models [4]. LMHLD is larger, with 25,365 patches from five sensors across seven study areas [5]. Oak et al. instead compare four CNN-based models on one dataset, where LinkNet gave the best F1-score of 85.7% [6]. These resources differ in scale, but each compares models within a given input configuration rather than across sensors.\n\n**Input design.** Ahmad et al. identify a compact 8-channel subset that matches or exceeds the F1 of configurations using up to 30 channels [7], while Chen and Fan study how selecting contributing factors changes the accuracy of machine learning and deep learning susceptibility models [8]. Both treat input selection within a fixed data setting.\n\n## 3 Research gap and contributions\n\nThree limitations stand out. Using SAR is hindered by the domain knowledge needed for pre-processing and interpretation [1]; deep learning landslide mapping models often show sensitivity problems, overfitting and low accuracy [3]; and the effect of factor selection on model accuracy is still unclear [8]. We argue that a compact model shared across optical and SAR input, adaptable to a new region with few labelled tiles, is missing.\n\nOur contributions are: (1) LiteSlide, a transfer model with a shared encoder and 4.1 million parameters; (2) a mean F1 of 0.812 on four held-out regions, against 0.771 for the best of three baselines; and (3) an SAR-only F1 of 0.703, and a drop of 0.04 in F1 when fine-tuning tiles fall from 200 to 50.\n\n## References\n\n[1] V. Boehm, W. J. Leong, R. B. Mahesh, I. Prapas, E. Nemni, and F. Kalaitzis, \"Deep Learning for Rapid Landslide Detection using Synthetic Aperture Radar (SAR) Datacubes,\" arXiv:2211.02869, 2022.\n[2] L. Nava, O. Monserrat, and F. Catani, \"Improving Landslide Detection on SAR Data through Deep Learning,\" arXiv:2105.00782, 2021.\n[3] A. J. Ganerød, G. Franch, E. Lindsay, and M. Calovi, \"Automating global landslide detection with heterogeneous ensemble deep-learning classification,\" arXiv:2310.05959, 2023.\n[4] O. Ghorbanzadeh, Y. Xu, P. Ghamisi, M. Kopp, and D. Kreil, \"Landslide4Sense: Reference Benchmark Data and Deep Learning Models for Landslide Detection,\" arXiv:2206.00515, 2022.\n[5] G. Liu, Y. Wang, X. Chen, B. Du, P. Li, and Y. Wu, \"LMHLD: A Large-scale Multi-source High-resolution Landslide Dataset for Landslide Detection based on Deep Learning,\" arXiv:2502.19866, 2025.\n[6] O. Oak, R. Nazre, S. Naigaonkar, S. Sawant, and H. Vaidya, \"A Comparative Analysis of CNN-based Deep Learning Models for Landslide Detection,\" arXiv:2408.01692, 2024.\n[7] A. Ahmad, O. Karakus, and P. L. Rosin, \"Sequential Feature Selection for Efficient Landslide Segmentation from Multi-Spectral Data,\" arXiv:2605.09746, 2026.\n[8] C. Chen and L. Fan, \"Selection of contributing factors for predicting landslide susceptibility using machine learning and deep learning models,\" arXiv:2309.06062, 2023.\n",
+  "word_count": 428
+ },
+ "references": {
+  "style": "ieee",
+  "entries": [
+   "[1] V. Boehm, W. J. Leong, R. B. Mahesh, I. Prapas, E. Nemni, and F. Kalaitzis, \"Deep Learning for Rapid Landslide Detection using Synthetic Aperture Radar (SAR) Datacubes,\" arXiv:2211.02869, 2022.",
+   "[2] L. Nava, O. Monserrat, and F. Catani, \"Improving Landslide Detection on SAR Data through Deep Learning,\" arXiv:2105.00782, 2021.",
+   "[3] A. J. Ganerød, G. Franch, E. Lindsay, and M. Calovi, \"Automating global landslide detection with heterogeneous ensemble deep-learning classification,\" arXiv:2310.05959, 2023.",
+   "[4] O. Ghorbanzadeh, Y. Xu, P. Ghamisi, M. Kopp, and D. Kreil, \"Landslide4Sense: Reference Benchmark Data and Deep Learning Models for Landslide Detection,\" arXiv:2206.00515, 2022.",
+   "[5] G. Liu, Y. Wang, X. Chen, B. Du, P. Li, and Y. Wu, \"LMHLD: A Large-scale Multi-source High-resolution Landslide Dataset for Landslide Detection based on Deep Learning,\" arXiv:2502.19866, 2025.",
+   "[6] O. Oak, R. Nazre, S. Naigaonkar, S. Sawant, and H. Vaidya, \"A Comparative Analysis of CNN-based Deep Learning Models for Landslide Detection,\" arXiv:2408.01692, 2024.",
+   "[7] A. Ahmad, O. Karakus, and P. L. Rosin, \"Sequential Feature Selection for Efficient Landslide Segmentation from Multi-Spectral Data,\" arXiv:2605.09746, 2026.",
+   "[8] C. Chen and L. Fan, \"Selection of contributing factors for predicting landslide susceptibility using machine learning and deep learning models,\" arXiv:2309.06062, 2023."
+  ],
+  "files": [
+   "references.ieee.txt",
+   "references.bib",
+   "references.ris"
+  ]
+ },
+ "evidence": {
+  "cited_sentences": [
+   {
+    "sentence": "D001",
+    "part": "background",
+    "kind": "plain",
+    "text": "Rapid landslide mapping after a triggering event informs emergency response, and two kinds of imagery compete for the job.",
+    "keys": [],
+    "status": "no citation",
+    "score": null,
+    "evidence": "",
+    "numbers_ok": null
+   },
+   {
+    "sentence": "D002",
+    "part": "background",
+    "kind": "cited",
+    "text": "Synthetic Aperture Radar (SAR) can provide measurements of affected areas independent of weather or lighting conditions, yet optical images gave an overall accuracy of 99.20% in a Hokkaido earthquake case where SAR-based CNNs reached overall accuracies beyond 94%.",
+    "keys": [
+     "boehm2022",
+     "nava2021"
+    ],
+    "status": "supported",
+    "score": 1.0,
+    "evidence": "With climate change predicted to increase the likelihood of landslide events, there is a growing need for rapid landslide detection technologies that help inform emergency responses. Synthetic Aperture Radar (SAR) is a remote sensing technique that can provide measurements of affected areas independ",
+    "numbers_ok": true,
+    "best_key": "boehm2022",
+    "clauses": [
+     {
+      "clause": "Synthetic Aperture Radar (SAR) can provide measurements of affected areas independent of weather or lighting conditions",
+      "keys": [
+       "boehm2022"
+      ],
+      "status": "supported",
+      "score": 1.0,
+      "evidence": "With climate change predicted to increase the likelihood of landslide events, there is a growing need for rapid landslide detection technologies that help inform emergency responses. Synthetic Aperture Radar (SAR) is a remote sensing technique that can provide measurements of affected areas independ",
+      "best_key": "boehm2022"
+     },
+     {
+      "clause": ", yet optical images gave an overall accuracy of 99.20% in a Hokkaido earthquake case where SAR-based CNNs reached overa",
+      "keys": [
+       "nava2021"
+      ],
+      "status": "supported",
+      "score": 0.76,
+      "evidence": "We analyzed the conditions before and after the earthquake exploiting multi-polarization SAR as well as optical data by means of a CNN implemented in TensorFlow that points out the locations where the Landslide class is predicted as more likely. As expected, the CNN run on optical images proved itse",
+      "best_key": "nava2021"
+     }
+    ]
+   },
+   {
+    "sentence": "D003",
+    "part": "background",
+    "kind": "plain",
+    "text": "Choosing a sensor therefore trades accuracy against availability, and a model that serves both would shorten the time to a usable inventory.",
+    "keys": [],
+    "status": "no citation",
+    "score": null,
+    "evidence": "",
+    "numbers_ok": null
+   },
+   {
+    "sentence": "D004",
+    "part": "related",
+    "kind": "cited",
+    "text": "**Input modality.** Optical and SAR inputs have been compared directly: optical CNNs were more accurate, whereas SAR still allowed rapid mapping during storms and under dense cloud cover.",
+    "keys": [
+     "nava2021"
+    ],
+    "status": "supported",
+    "score": 0.54,
+    "evidence": "As expected, the CNN run on optical images proved itself excellent for the landslide detection task, achieving an overall accuracy of 99.20% while CNNs based on the combination of ground range detected (GRD) SAR data reached overall accuracies beyond 94%. Our findings show that the integrated use of",
+    "numbers_ok": null,
+    "best_key": "nava2021",
+    "clauses": [
+     {
+      "clause": "**Input modality.** Optical and SAR inputs have been compared directly: optical CNNs were more accurate, whereas SAR sti",
+      "keys": [
+       "nava2021"
+      ],
+      "status": "supported",
+      "score": 0.54,
+      "evidence": "As expected, the CNN run on optical images proved itself excellent for the landslide detection task, achieving an overall accuracy of 99.20% while CNNs based on the combination of ground range detected (GRD) SAR data reached overall accuracies beyond 94%. Our findings show that the integrated use of",
+      "best_key": "nava2021"
+     }
+    ]
+   },
+   {
+    "sentence": "D005",
+    "part": "related",
+    "kind": "cited",
+    "text": "Boehm et al. show that deep learning models can detect landslides from SAR data, with an area under the precision-recall curve above 0.7, and that early detection is possible when SAR is combined with terrain information.",
+    "keys": [
+     "boehm2022"
+    ],
+    "status": "supported",
+    "score": 0.79,
+    "evidence": "Our results demonstrate that DL models can be used to detect landslides from SAR data, achieving an Area under the Precision-Recall curve exceeding 0.7. We find that additional satellite visits enhance detection performance, but that early detection is possible when SAR data is combined with terrain",
+    "numbers_ok": true,
+    "best_key": "boehm2022",
+    "clauses": [
+     {
+      "clause": "Boehm et al. show that deep learning models can detect landslides from SAR data, with an area under the precision-recall",
+      "keys": [
+       "boehm2022"
+      ],
+      "status": "supported",
+      "score": 0.79,
+      "evidence": "Our results demonstrate that DL models can be used to detect landslides from SAR data, achieving an Area under the Precision-Recall curve exceeding 0.7. We find that additional satellite visits enhance detection performance, but that early detection is possible when SAR data is combined with terrain",
+      "best_key": "boehm2022"
+     }
+    ]
+   },
+   {
+    "sentence": "D006",
+    "part": "related",
+    "kind": "cited",
+    "text": "Combining Sentinel-1 and Sentinel-2 bands gave the highest F1-score (0.69) in a heterogeneous ensemble, compared with 0.61 for Sentinel-2 bands only.",
+    "keys": [
+     "ganerd2023"
+    ],
+    "status": "supported",
+    "score": 0.78,
+    "evidence": "The ensemble model achieved the highest F1-score (0.69) when combining both Sentinel-1 and Sentinel-2 bands, with the highest average improvement of 6.87 % when the ensemble size was 20. On the other hand, Sentinel-2 bands only performed very well, with an F1 score of 0.61 when the ensemble size is ",
+    "numbers_ok": true,
+    "best_key": "ganerd2023",
+    "clauses": [
+     {
+      "clause": "Combining Sentinel-1 and Sentinel-2 bands gave the highest F1-score (0.69) in a heterogeneous ensemble, compared with 0.",
+      "keys": [
+       "ganerd2023"
+      ],
+      "status": "supported",
+      "score": 0.78,
+      "evidence": "The ensemble model achieved the highest F1-score (0.69) when combining both Sentinel-1 and Sentinel-2 bands, with the highest average improvement of 6.87 % when the ensemble size was 20. On the other hand, Sentinel-2 bands only performed very well, with an F1 score of 0.61 when the ensemble size is ",
+      "best_key": "ganerd2023"
+     }
+    ]
+   },
+   {
+    "sentence": "D007",
+    "part": "related",
+    "kind": "cited",
+    "text": "**Benchmarks and architecture comparisons.** Landslide4Sense provides 3,799 image patches that fuse Sentinel-2 layers with elevation and slope layers, and the authors found that ResU-Net outperformed ten other segmentation models.",
+    "keys": [
+     "ghorbanzadeh2022"
+    ],
+    "status": "supported",
+    "score": 0.44,
+    "evidence": "This study introduces Landslide4Sense, a reference benchmark for landslide detection from remote sensing. The repository features 3,799 image patches fusing optical layers from Sentinel-2 sensors with the digital elevation model and slope layer derived from ALOS PALSAR.",
+    "numbers_ok": true,
+    "best_key": "ghorbanzadeh2022",
+    "clauses": [
+     {
+      "clause": "**Benchmarks and architecture comparisons.** Landslide4Sense provides 3,799 image patches that fuse Sentinel-2 layers wi",
+      "keys": [
+       "ghorbanzadeh2022"
+      ],
+      "status": "supported",
+      "score": 0.44,
+      "evidence": "This study introduces Landslide4Sense, a reference benchmark for landslide detection from remote sensing. The repository features 3,799 image patches fusing optical layers from Sentinel-2 sensors with the digital elevation model and slope layer derived from ALOS PALSAR.",
+      "best_key": "ghorbanzadeh2022"
+     }
+    ]
+   },
+   {
+    "sentence": "D008",
+    "part": "related",
+    "kind": "cited",
+    "text": "LMHLD is larger, with 25,365 patches from five sensors across seven study areas.",
+    "keys": [
+     "liu2025"
+    ],
+    "status": "supported",
+    "score": 0.88,
+    "evidence": "LMHLD collects remote sensing images from five different satellite sensors across seven study areas worldwide: Wenchuan, China (2008); Rio de Janeiro, Brazil (2011); Gorkha, Nepal (2015); Jiuzhaigou, China (2015); Taiwan, China (2018); Hokkaido, Japan (2018); Emilia-Romagna, Italy (2023). The datase",
+    "numbers_ok": true,
+    "best_key": "liu2025",
+    "clauses": [
+     {
+      "clause": "LMHLD is larger, with 25,365 patches from five sensors across seven study areas.",
+      "keys": [
+       "liu2025"
+      ],
+      "status": "supported",
+      "score": 0.88,
+      "evidence": "LMHLD collects remote sensing images from five different satellite sensors across seven study areas worldwide: Wenchuan, China (2008); Rio de Janeiro, Brazil (2011); Gorkha, Nepal (2015); Jiuzhaigou, China (2015); Taiwan, China (2018); Hokkaido, Japan (2018); Emilia-Romagna, Italy (2023). The datase",
+      "best_key": "liu2025"
+     }
+    ]
+   },
+   {
+    "sentence": "D009",
+    "part": "related",
+    "kind": "cited",
+    "text": "Oak et al. instead compare four CNN-based models on one dataset, where LinkNet gave the best F1-score of 85.7%.",
+    "keys": [
+     "oak2024"
+    ],
+    "status": "supported",
+    "score": 0.66,
+    "evidence": "We have computed the confusion matrix for each model and used performance metrics including precision, recall and f1-score to evaluate and compare the deep learning models. According to the experimental results, LinkNet gave the best results among the four models having an Accuracy of 97.49% and a F",
+    "numbers_ok": true,
+    "best_key": "oak2024",
+    "clauses": [
+     {
+      "clause": "Oak et al. instead compare four CNN-based models on one dataset, where LinkNet gave the best F1-score of 85.7%.",
+      "keys": [
+       "oak2024"
+      ],
+      "status": "supported",
+      "score": 0.66,
+      "evidence": "We have computed the confusion matrix for each model and used performance metrics including precision, recall and f1-score to evaluate and compare the deep learning models. According to the experimental results, LinkNet gave the best results among the four models having an Accuracy of 97.49% and a F",
+      "best_key": "oak2024"
+     }
+    ]
+   },
+   {
+    "sentence": "D010",
+    "part": "related",
+    "kind": "plain",
+    "text": "These resources differ in scale, but each compares models within a given input configuration rather than across sensors.",
+    "keys": [],
+    "status": "no citation",
+    "score": null,
+    "evidence": "",
+    "numbers_ok": null
+   },
+   {
+    "sentence": "D011",
+    "part": "related",
+    "kind": "cited",
+    "text": "**Input design.** Ahmad et al. identify a compact 8-channel subset that matches or exceeds the F1 of configurations using up to 30 channels, while Chen and Fan study how selecting contributing factors changes the accuracy of machine learning and deep learning susceptibility models.",
+    "keys": [
+     "ahmad2026",
+     "chen2023"
+    ],
+    "status": "supported",
+    "score": 0.9,
+    "evidence": "Beyond identifying a compact 8-channel subset that matches or exceeds the segmentation F1 of configurations using up to 30 channels, we use the selection process itself to interrogate which spectral and topographic features landslide models genuinely rely on, and what this reveals about the physical",
+    "numbers_ok": true,
+    "best_key": "ahmad2026",
+    "clauses": [
+     {
+      "clause": "**Input design.** Ahmad et al. identify a compact 8-channel subset that matches or exceeds the F1 of configurations usin",
+      "keys": [
+       "ahmad2026"
+      ],
+      "status": "supported",
+      "score": 0.9,
+      "evidence": "Beyond identifying a compact 8-channel subset that matches or exceeds the segmentation F1 of configurations using up to 30 channels, we use the selection process itself to interrogate which spectral and topographic features landslide models genuinely rely on, and what this reveals about the physical",
+      "best_key": "ahmad2026"
+     },
+     {
+      "clause": ", while Chen and Fan study how selecting contributing factors changes the accuracy of machine learning and deep learning",
+      "keys": [
+       "chen2023"
+      ],
+      "status": "supported",
+      "score": 0.45,
+      "evidence": "In this study, the impact of the selection of contributing factors on the accuracy of landslide susceptibility predictions using ML and DL models was investigated. Four methods for selecting contributing factors were considered for all the aforementioned ML and DL models, which included Information ",
+      "best_key": "chen2023"
+     }
+    ]
+   },
+   {
+    "sentence": "D012",
+    "part": "related",
+    "kind": "plain",
+    "text": "Both treat input selection within a fixed data setting.",
+    "keys": [],
+    "status": "no citation",
+    "score": null,
+    "evidence": "",
+    "numbers_ok": null
+   },
+   {
+    "sentence": "D013",
+    "part": "gap",
+    "kind": "plain",
+    "text": "Three limitations stand out.",
+    "keys": [],
+    "status": "no citation",
+    "score": null,
+    "evidence": "",
+    "numbers_ok": null
+   },
+   {
+    "sentence": "D014",
+    "part": "gap",
+    "kind": "cited",
+    "text": "Using SAR is hindered by the domain knowledge needed for pre-processing and interpretation; deep learning landslide mapping models often show sensitivity problems, overfitting and low accuracy; and the effect of factor selection on model accuracy is still unclear.",
+    "keys": [
+     "boehm2022",
+     "ganerd2023",
+     "chen2023"
+    ],
+    "status": "supported",
+    "score": 0.88,
+    "evidence": "Synthetic Aperture Radar (SAR) is a remote sensing technique that can provide measurements of affected areas independent of weather or lighting conditions. Usage of SAR, however, is hindered by domain knowledge that is necessary for the pre-processing steps and its interpretation requires expert kno",
+    "numbers_ok": null,
+    "best_key": "boehm2022",
+    "limitation_score": 0.82,
+    "clauses": [
+     {
+      "clause": "Using SAR is hindered by the domain knowledge needed for pre-processing and interpretation",
+      "keys": [
+       "boehm2022"
+      ],
+      "status": "supported",
+      "score": 0.88,
+      "evidence": "Synthetic Aperture Radar (SAR) is a remote sensing technique that can provide measurements of affected areas independent of weather or lighting conditions. Usage of SAR, however, is hindered by domain knowledge that is necessary for the pre-processing steps and its interpretation requires expert kno",
+      "best_key": "boehm2022"
+     },
+     {
+      "clause": "; deep learning landslide mapping models often show sensitivity problems, overfitting and low accuracy",
+      "keys": [
+       "ganerd2023"
+      ],
+      "status": "supported",
+      "score": 0.95,
+      "evidence": "Many deep learning (DL) models have recently been applied for landside mapping using medium- to high-resolution satellite images as input. However, they often suffer from sensitivity problems, overfitting, and low mapping accuracy.",
+      "best_key": "ganerd2023"
+     },
+     {
+      "clause": "; and the effect of factor selection on model accuracy is still unclear",
+      "keys": [
+       "chen2023"
+      ],
+      "status": "supported",
+      "score": 1.0,
+      "evidence": "However, selecting more important factors is still a challenging task and there is no generally accepted method. Furthermore, the effects of factor selection using various methods on the prediction accuracy of ML and DL models are unclear.",
+      "best_key": "chen2023"
+     }
+    ]
+   },
+   {
+    "sentence": "D015",
+    "part": "gap",
+    "kind": "gap",
+    "text": "We argue that a compact model shared across optical and SAR input, adaptable to a new region with few labelled tiles, is missing.",
+    "keys": [],
+    "status": "no citation",
+    "score": null,
+    "evidence": "",
+    "numbers_ok": null
+   },
+   {
+    "sentence": "D016",
+    "part": "contribution",
+    "kind": "contribution",
+    "text": "Our contributions are: (1) LiteSlide, a transfer model with a shared encoder and 4.1 million parameters",
+    "keys": [],
+    "status": "no citation",
+    "score": null,
+    "evidence": "",
+    "numbers_ok": null
+   },
+   {
+    "sentence": "D017",
+    "part": "contribution",
+    "kind": "contribution",
+    "text": "; (2) a mean F1 of 0.812 on four held-out regions, against 0.771 for the best of three baselines",
+    "keys": [],
+    "status": "no citation",
+    "score": null,
+    "evidence": "",
+    "numbers_ok": null
+   },
+   {
+    "sentence": "D018",
+    "part": "contribution",
+    "kind": "contribution",
+    "text": "; and (3) an SAR-only F1 of 0.703, and a drop of 0.04 in F1 when fine-tuning tiles fall from 200 to 50.",
+    "keys": [],
+    "status": "no citation",
+    "score": null,
+    "evidence": "",
+    "numbers_ok": null
+   }
+  ],
+  "gaps": [
+   {
+    "gap": "G1",
+    "sentence": "D015",
+    "text": "We argue that a compact model shared across optical and SAR input, adaptable to a new region with few labelled tiles, is missing.",
+    "cited": [
+     "boehm2022",
+     "ganerd2023",
+     "chen2023"
+    ],
+    "best_limitation_overlap": 0.09,
+    "limitation_passage": "using SAR is hindered by the domain knowledge needed for pre-processing and interpretation Usage of SAR, however, is hindered by domain knowledge that is necessary for the pre-processing steps deep learning landslide mapping models often sh",
+    "ledger_from": [
+     "boehm2022:limitation",
+     "ganerd2023:limitation",
+     "chen2023:limitation"
+    ],
+    "status": "derived"
+   }
+  ],
+  "contributions": [
+   {
+    "contribution": "C1",
+    "sentence": "D016",
+    "text": "Our contributions are: (1) LiteSlide, a transfer model with a shared encoder and 4.1 million parameters",
+    "anchors": [
+     {
+      "anchor": "Sec: Method",
+      "ok": true,
+      "detail": "section 'Method' exists"
+     },
+     {
+      "anchor": "N: 4.1",
+      "ok": true,
+      "detail": "numbers ['4.1'] found in own material"
+     }
+    ],
+    "auto_match": [
+     {
+      "score": 0.44,
+      "own": "O002",
+      "text": "The model has 4.1 million parameters."
+     },
+     {
+      "score": 0.37,
+      "own": "O001",
+      "text": "LiteSlide uses a shared encoder with sensor-specific stems for Sentinel-2 optical and Sentinel-1 SAR input."
+     }
+    ],
+    "numbers": [
+     "1",
+     "4.1"
+    ],
+    "numbers_missing": [],
+    "addresses": [
+     "G1"
+    ],
+    "gap_overlap": 0.15,
+    "status": "evidenced"
+   },
+   {
+    "contribution": "C2",
+    "sentence": "D017",
+    "text": "; (2) a mean F1 of 0.812 on four held-out regions, against 0.771 for the best of three baselines",
+    "anchors": [
+     {
+      "anchor": "Table 1",
+      "ok": true,
+      "detail": "Table 1 found: Table 1. F1 of LiteSlide and three baselines on four held-out regions."
+     },
+     {
+      "anchor": "N: 0.812",
+      "ok": true,
+      "detail": "numbers ['0.812'] found in own material"
+     },
+     {
+      "anchor": "N: 0.771",
+      "ok": true,
+      "detail": "numbers ['0.771'] found in own material"
+     }
+    ],
+    "auto_match": [
+     {
+      "score": 0.56,
+      "own": "O005",
+      "text": "LiteSlide reaches a mean F1 of 0.812, against 0.771 for the best baseline."
+     },
+     {
+      "score": 0.45,
+      "own": "O008",
+      "text": "Table 1. F1 of LiteSlide and three baselines on four held-out regions."
+     }
+    ],
+    "numbers": [
+     "2",
+     "0.812",
+     "0.771"
+    ],
+    "numbers_missing": [],
+    "addresses": [
+     "G1"
+    ],
+    "gap_overlap": 0.08,
+    "status": "evidenced"
+   },
+   {
+    "contribution": "C3",
+    "sentence": "D018",
+    "text": "; and (3) an SAR-only F1 of 0.703, and a drop of 0.04 in F1 when fine-tuning tiles fall from 200 to 50.",
+    "anchors": [
+     {
+      "anchor": "N: 0.703",
+      "ok": true,
+      "detail": "numbers ['0.703'] found in own material"
+     },
+     {
+      "anchor": "Fig. 3",
+      "ok": true,
+      "detail": "Figure 3 found: Figure 3. F1 as a function of the number of fine-tuning tiles."
+     },
+     {
+      "anchor": "N: 0.04",
+      "ok": true,
+      "detail": "numbers ['0.04'] found in own material"
+     }
+    ],
+    "auto_match": [
+     {
+      "score": 0.75,
+      "own": "O007",
+      "text": "Figure 3 shows that performance drops by 0.04 when the number of fine-tuning tiles falls from 200 to 50."
+     },
+     {
+      "score": 0.35,
+      "own": "O009",
+      "text": "Figure 3. F1 as a function of the number of fine-tuning tiles."
+     }
+    ],
+    "numbers": [
+     "3",
+     "0.703",
+     "0.04",
+     "200",
+     "50"
+    ],
+    "numbers_missing": [],
+    "addresses": [],
+    "gap_overlap": 0.14,
+    "status": "evidenced"
+   }
+  ],
+  "claims": [
+   {
+    "id": "boehm2022:limitation",
+    "key": "boehm2022",
+    "kind": "limitation",
+    "text": "using SAR is hindered by the domain knowledge needed for pre-processing and interpretation",
+    "quote": "Usage of SAR, however, is hindered by domain knowledge that is necessary for the pre-processing steps",
+    "verified": true
+   },
+   {
+    "id": "ganerd2023:limitation",
+    "key": "ganerd2023",
+    "kind": "limitation",
+    "text": "deep learning landslide mapping models often show sensitivity problems, overfitting and low accuracy",
+    "quote": "they often suffer from sensitivity problems, overfitting, and low mapping accuracy",
+    "verified": true
+   },
+   {
+    "id": "chen2023:limitation",
+    "key": "chen2023",
+    "kind": "limitation",
+    "text": "how factor selection affects the accuracy of ML and DL models is unclear",
+    "quote": "the effects of factor selection using various methods on the prediction accuracy of ML and DL models are unclear",
+    "verified": true
+   }
+  ],
+  "groups": [
+   {
+    "id": "G1",
+    "title": "Input modality: optical, SAR and their fusion",
+    "dimension": "sensor input",
+    "members": [
+     "nava2021",
+     "boehm2022",
+     "ganerd2023"
+    ],
+    "axes": "accuracy by input; practical constraints",
+    "takeaway": "optical input is more accurate, SAR works under cloud, fusion helps"
+   },
+   {
+    "id": "G2",
+    "title": "Benchmarks and architecture comparisons",
+    "dimension": "data and evaluation",
+    "members": [
+     "ghorbanzadeh2022",
+     "liu2025",
+     "oak2024"
+    ],
+    "axes": "dataset size; models compared",
+    "takeaway": "datasets grow but models are compared within one input type"
+   },
+   {
+    "id": "G3",
+    "title": "Input design",
+    "dimension": "which inputs a model needs",
+    "members": [
+     "ahmad2026",
+     "chen2023"
+    ],
+    "axes": "channel / factor selection",
+    "takeaway": "selecting inputs is studied for a single sensor setting"
+   }
+  ]
+ },
+ "boundaries": {
+  "open_issues": [
+   {
+    "code": "recent_work_not_cited",
+    "severity": "warn",
+    "sentence": null,
+    "message": "recent work in the library is not cited (dahal2024): cover current progress or say why it is out of scope"
+   }
+  ],
+  "human_review": [
+   {
+    "kind": "recent_work_not_cited",
+    "sentence": null,
+    "detail": "recent work in the library is not cited (dahal2024): cover current progress or say why it is out of scope"
+   }
+  ],
+  "uncertainty": [
+   {
+    "kind": "lexical_checks_only",
+    "detail": "statement-to-source support is a lexical overlap screen over the abstract / text provided; it cannot judge meaning. Read the evidence table for every claim you rely on."
+   },
+   {
+    "kind": "references_not_verified",
+    "detail": "references were not looked up online (build --online): only their structure was checked"
+   }
+  ],
+  "check_summary": {
+   "sentences": 18,
+   "paragraphs": 6,
+   "words": 428,
+   "cited_keys": 8,
+   "library": 9,
+   "severity": {
+    "info": 1,
+    "warn": 1
+   },
+   "parts": [
+    "background",
+    "contribution",
+    "gap",
+    "related"
+   ]
+  }
+ },
+ "files": [
+  "intro.md",
+  "intro.docx",
+  "intro.tex",
+  "references.ieee.txt",
+  "references.bib",
+  "references.ris",
+  "evidence_table.csv",
+  "evidence_table.json",
+  "traceability.md",
+  "review_checklist.md"
+ ],
+ "_meta": {
+  "generator": "intro-ledger/iw.py 1.0.0",
+  "contract_fields": [],
+  "unfilled_fields": [],
+  "contract_found": false,
+  "files": [
+   "intro.md",
+   "intro.docx",
+   "intro.tex",
+   "references.ieee.txt",
+   "references.bib",
+   "references.ris",
+   "evidence_table.csv",
+   "evidence_table.json",
+   "traceability.md",
+   "review_checklist.md"
+  ]
+ }
+}

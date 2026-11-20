@@ -1,0 +1,45 @@
+=== claim boehm2022
+kind: limitation
+text: using SAR is hindered by the domain knowledge needed for pre-processing and interpretation
+quote: Usage of SAR, however, is hindered by domain knowledge that is necessary for the pre-processing steps
+=== claim ganerd2023
+kind: limitation
+text: deep learning landslide mapping models often show sensitivity problems, overfitting and low accuracy
+quote: they often suffer from sensitivity problems, overfitting, and low mapping accuracy
+=== claim chen2023
+kind: limitation
+text: how factor selection affects the accuracy of ML and DL models is unclear
+quote: the effects of factor selection using various methods on the prediction accuracy of ML and DL models are unclear
+=== group G1
+title: Input modality: optical, SAR and their fusion
+dimension: sensor input
+members: nava2021, boehm2022, ganerd2023
+axes: accuracy by input; practical constraints
+takeaway: optical input is more accurate, SAR works under cloud, fusion helps
+=== group G2
+title: Benchmarks and architecture comparisons
+dimension: data and evaluation
+members: ghorbanzadeh2022, liu2025, oak2024
+axes: dataset size; models compared
+takeaway: datasets grow but models are compared within one input type
+=== group G3
+title: Input design
+dimension: which inputs a model needs
+members: ahmad2026, chen2023
+axes: channel / factor selection
+takeaway: selecting inputs is studied for a single sensor setting
+=== gap G1
+type: limitation
+statement: SAR needs expert pre-processing, global DL models overfit, and input-selection effects are unclear
+from: boehm2022:limitation, ganerd2023:limitation, chen2023:limitation
+=== contribution C1
+statement: lightweight transfer model with a shared encoder and 4.1 million parameters
+evidence: Sec: Method | N: 4.1
+addresses: G1
+=== contribution C2
+statement: mean F1 0.812 against 0.771 on four held-out regions
+evidence: Table 1 | N: 0.812 | N: 0.771
+addresses: G1
+=== contribution C3
+statement: SAR-only F1 0.703 and effect of fine-tuning tiles
+evidence: N: 0.703 | Fig. 3 | N: 0.04

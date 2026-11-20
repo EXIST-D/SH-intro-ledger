@@ -1,0 +1,49 @@
+$ iw.py run --case case.json --out out --work <work>
+# Evidence brief (generated; the facts here are what the draft may rest on)
+
+## Task
+- language: zh | length hint: 250 | style hint: gbt7714
+```
+请为论文撰写引言与相关工作，约250字，使用中文，参考文献按GB/T 7714-2015。
+```
+
+## Own material (case.json (text fields))
+- sections: research_summary; 研究内容（虚构示例）; 实验; 局限; abstract; abstract
+- figures/tables: (none)
+- result sentences with numbers (2): 
+  - O002 [实验] 在四个留出区域上，LiteSlide的平均F1为0.812，最强基线为0.771。
+  - O003 [实验] 仅使用雷达数据时F1为0.703。
+
+## Library (4 entries; text: Counter({'abstract': 4}))
+key | authors year | title | text | evidence candidates
+zhang2020 | 张伟; 李明 2020 | 基于深度卷积网络的光学影像滑坡自动识别 | abstract | route 1, result 1, limitation 1
+wang2021 | 王芳; 刘洋 et al. 2021 | 合成孔径雷达影像滑坡检测的深度学习方法研究 | abstract | result 1
+li2022 | 李强; 赵磊 2022 | 多源遥感数据融合的滑坡识别基准数据集 | abstract | data 3
+chen2023zh | 陈思; 周杰 2023 | 迁移学习在滑坡识别中的应用 | abstract | data 1, limitation 2
+
+## Source evidence (verbatim sentences you may quote; `show --entry KEY` for all)
+### zhang2020 [abstract]
+- route: 针对滑坡灾后快速制图的需求，本文提出一种基于深度卷积网络的滑坡自动识别方法。
+- result: 方法在高分辨率光学影像上训练，在测试区总体精度达到93.5%。
+- limitation: 实验表明，该方法对阴影和裸地造成的误检较为敏感，且仅在单一地区验证，跨区域泛化能力尚未检验。
+### wang2021 [abstract]
+- result: 结果表明，仅使用雷达数据时精度明显低于光学影像，加入数字高程模型后F1提高到0.74。
+### li2022 [abstract]
+... (16 more lines; the full brief is in out/brief.md)
+
+$ iw.py ingest <work> decisions.txt
+recorded: claim 3, gap 1, contribution 2
+
+
+$ iw.py check <work> draft.md
+draft: 8 sentences in 4 paragraphs (183 words) | parts: background, contribution, gap, related | cited 4 of 4 library entries | issues: {'warn': 1, 'info': 4}
+  warn  weak_support                       D006 wording overlaps its source only weakly (0.38): check it says what zhang2020 says. Closest passage: "方法在高分辨率光学影像上训练，在测试区总体精度达到93.5%。 实验表明，该方法对阴影和裸地造成的误检较为敏感，且仅在单一地区验证，跨区域泛化能力尚未检验。" [clause: "然而，已有工作或仅在单一地区验证"]
+cited sentences: {'supported': 3, 'weak': 1}
+gaps: Counter({'derived': 1}) | contributions: Counter({'evidenced': 2})
+
+
+$ iw.py build <work> draft.md --out out --style gbt7714
+{"written": "out", "status": "success", "words": 183, "cited_works": 4, "issues": {"warn": 1, "info": 4}, "style": "gbt7714", "unfilled_contract_fields": [], "contract_found": false}
+WARNING: no output_contract found in the case file: read /input/case.json and task.md and add the fields by hand via --answers
+
+

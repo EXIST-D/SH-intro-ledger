@@ -1,0 +1,8 @@
+[1] V. Boehm, W. J. Leong, R. B. Mahesh, I. Prapas, E. Nemni, and F. Kalaitzis, "Deep Learning for Rapid Landslide Detection using Synthetic Aperture Radar (SAR) Datacubes," arXiv:2211.02869, 2022.
+[2] L. Nava, O. Monserrat, and F. Catani, "Improving Landslide Detection on SAR Data through Deep Learning," arXiv:2105.00782, 2021.
+[3] A. J. Ganerød, G. Franch, E. Lindsay, and M. Calovi, "Automating global landslide detection with heterogeneous ensemble deep-learning classification," arXiv:2310.05959, 2023.
+[4] O. Ghorbanzadeh, Y. Xu, P. Ghamisi, M. Kopp, and D. Kreil, "Landslide4Sense: Reference Benchmark Data and Deep Learning Models for Landslide Detection," arXiv:2206.00515, 2022.
+[5] G. Liu, Y. Wang, X. Chen, B. Du, P. Li, and Y. Wu, "LMHLD: A Large-scale Multi-source High-resolution Landslide Dataset for Landslide Detection based on Deep Learning," arXiv:2502.19866, 2025.
+[6] O. Oak, R. Nazre, S. Naigaonkar, S. Sawant, and H. Vaidya, "A Comparative Analysis of CNN-based Deep Learning Models for Landslide Detection," arXiv:2408.01692, 2024.
+[7] A. Ahmad, O. Karakus, and P. L. Rosin, "Sequential Feature Selection for Efficient Landslide Segmentation from Multi-Spectral Data," arXiv:2605.09746, 2026.
+[8] C. Chen and L. Fan, "Selection of contributing factors for predicting landslide susceptibility using machine learning and deep learning models," arXiv:2309.06062, 2023.
